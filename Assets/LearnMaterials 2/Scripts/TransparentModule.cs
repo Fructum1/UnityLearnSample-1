@@ -6,6 +6,8 @@ using UnityEngine;
 [HelpURL("https://docs.google.com/document/d/1Cmm__cbik5J8aHAI6PPaAUmEMF3wAcNo3rpgzsYPzDM/edit?usp=sharing")]
 public class TransparentModule : MonoBehaviour
 {
+    [SerializeField]
+    [Range(0f, 1f)]
     private float changeSpeed;
 
     private float defaultAlpha;

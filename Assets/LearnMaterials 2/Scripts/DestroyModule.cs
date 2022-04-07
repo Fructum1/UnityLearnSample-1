@@ -4,7 +4,11 @@ using UnityEngine;
 [HelpURL("https://docs.google.com/document/d/1RMamVxE-yUpSfsPD_dEa4-Ak1qu6NTo83qY1O4XLxUY/edit?usp=sharing")]
 public class DestroyModule : MonoBehaviour
 {
+    [SerializeField]
+    [Range(0f, 10f)]
     private float destroyDelay;
+    [SerializeField]
+    [Min(0f)]
     private int minimalDestroyingObjectsCount;
 
     private Transform myTransform;
