@@ -13,6 +13,6 @@ public class MoveObject : SampleScript
 
     public override void Use()
     {
-        transform.position += point * speed;
+        transform.position += point * speed * Time.deltaTime;
     }
 }
