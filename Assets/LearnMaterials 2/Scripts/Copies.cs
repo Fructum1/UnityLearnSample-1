@@ -11,6 +11,7 @@ public class Copies : SampleScript
     [SerializeField]
     private float step;
 
+    [ContextMenu("test")]
     public override void Use()
         {
             Copy();
@@ -19,18 +20,17 @@ public class Copies : SampleScript
     private void Copy()
         {
             Vector3 shsh = new Vector3(0, 0, step);
-            int i = 0;
-                while (i < number_of_copies)
+                for (int i=0; i < number_of_copies; i++)
                 {
                     Instantiate(target, target.transform.position + shsh, Quaternion.identity);
-                    step += step;
+                    shsh.z += step;
                 }
         }
 
     // Start is called before the first frame update
     private void Start()
     {
-        Copy();
+        
     }
 
     private void Update()

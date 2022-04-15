@@ -15,4 +15,8 @@ public class MoveObject : SampleScript
     {
         transform.position += point * speed * Time.deltaTime;
     }
+    public void Update()
+    {
+        Use();
+    }
 }
